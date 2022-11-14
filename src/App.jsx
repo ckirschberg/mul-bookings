@@ -2,8 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import StateExample from './StateExample';
 import BookingForm from './BookingForm';
+import Name from './Name';
 
 function App() {
+
+  const names = ['Anne', 'Julian', 'Sebastian'];
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -11,6 +15,11 @@ function App() {
 
         <StateExample />
         <BookingForm />
+
+        { names.map(myName => (
+         <Name name={myName} /> 
+        ))}
+        
 
         <p>
           We want coffee - Julian pays for us all -

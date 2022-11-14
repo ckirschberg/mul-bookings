@@ -15,6 +15,11 @@ Exercise 1
 */
 const strings = ["1", "2", "3", "4", "5"];
 // TODO: numbers = 
+const numbers = strings.map(string => {
+    return Number(string) * Number(string);
+})
+console.log(numbers);
+
 
 /*
 Exercise 2:
@@ -22,6 +27,12 @@ Exercise 2:
   Expected result = [1, 4, 9, 16, 25]
 */
 // TODO: const squared = 
+
+const squared = numbers.map(elem => {
+    return Math.sqrt(elem);
+})
+console.log(squared);
+
 
 /* 
 Exercise 3:
@@ -39,5 +50,11 @@ Exercise 3:
 */
 const people = [
   {name: "Mathias", height: 1.80, weight: 95},
-  {name: "Kasper", height: 1.78, weight: 85}
+  {name: "Christian", height: 1.80, weight: 80}
 ]
+
+const peopleWithBmi = people.map(person => {
+    person.bmi = person.weight / (person.height * person.height);
+    return person;
+});
+console.log(peopleWithBmi);
