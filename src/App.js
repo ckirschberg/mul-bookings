@@ -1,12 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import StateExample from './StateExample';
+import BookingForm from './BookingForm';
 
 function App() {
   return (
-    <div className="App">
+<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
+        <StateExample />
+        <BookingForm />
+
         <p>
+          We want coffee - Julian pays for us all -
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
