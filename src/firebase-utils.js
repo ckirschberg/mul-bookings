@@ -1,6 +1,6 @@
-function transformToArray(data) {
+export function transformToArray(data) {
   const toReturn = [];
-  for (key in data) {
+  for (let key in data) {
     const temp = {
       ...data[key],
       id: key,

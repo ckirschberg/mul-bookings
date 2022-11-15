@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-import { Smile, Frown } from "lucide-react";
+import { Smile } from "lucide-react";
 
 function StateExample(props) {
   //        get    set      =          startværdi
