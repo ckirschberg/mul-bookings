@@ -1,8 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import { Smile, Frown } from "lucide-react";
 
-function StateExample() {
+function StateExample(props) {
   //        get    set      =          startværdi
   const [happy, setHappy] = useState(true);
 
@@ -12,7 +13,9 @@ function StateExample() {
 
   return (
     <div>
-      <p>I am happy? {happy.toString()}</p>
+      <p>
+        Mood: {happy ? <Smile color={props.primaryColor} size={48} /> : "😔"}
+      </p>
       <button onClick={switchHappy}>Switch happy</button>
     </div>
   );
