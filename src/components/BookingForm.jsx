@@ -13,10 +13,19 @@ export default function BookingForm() {
     setDate(event.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("You clicked");
-    // Kald serveren og gem data
+    let booking = { room: room, date: date };
+    const response = await fetch('https://mul2022-bookings-default-rtdb.europe-west1.firebasedatabase.app/.json',
+    { 
+      method: 'POST', 
+      body: JSON.stringify(booking)
+    })
+    const result = await response.json();
+    console.log(result);
+    booking.id = result.name;
+    console.log(booking);
   };
 
   return (
