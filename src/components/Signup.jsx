@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function Signup() {
+function Signup(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -18,6 +18,8 @@ function Signup() {
         }); 
         const result = await response.json();
         console.log(result);
+
+        props.setToken(result.idToken);
     }
     const handleEmail = (event) => {
         setEmail(event.target.value);

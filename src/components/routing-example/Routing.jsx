@@ -8,6 +8,7 @@ import Signup from './../Signup';
 import {useState} from 'react';
 
 export default function Routing() {
+  const [token, setToken] = useState("No token");
 
   return (
     <div>
@@ -15,9 +16,9 @@ export default function Routing() {
       
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home token={token}/>} />
           <Route path="about" element={<About />} />
-          <Route path="signup" element={<Signup />} />
+          <Route path="signup" element={<Signup setToken={setToken}/>} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
