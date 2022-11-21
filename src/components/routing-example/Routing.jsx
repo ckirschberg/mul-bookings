@@ -11,7 +11,6 @@ export default function Routing() {
   return (
     <div>
       <h1>Routing root</h1>
-      {test}
       
       <Routes>
         <Route path="/" element={<Layout />}>

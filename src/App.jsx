@@ -7,9 +7,10 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-       {/* <BrowserRouter>
+      <BrowserRouter>
         <Routing />
-      </BrowserRouter> */}
+      </BrowserRouter>
+
       <TheHeader />
       <MainContent />
     </div>
