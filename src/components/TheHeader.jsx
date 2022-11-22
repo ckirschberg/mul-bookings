@@ -2,7 +2,7 @@ import BookingForm from "./BookingForm.jsx";
 import Modal from "react-modal";
 import { useState } from "react";
 
-function TheHeader() {
+function TheHeader({ setBookings }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -20,7 +20,7 @@ function TheHeader() {
         onRequestClose={closeModal}
         contentLabel="Create booking form"
       >
-        <BookingForm />
+        <BookingForm setBookings={setBookings} />
       </Modal>
       <button onClick={openModal}>Create new booking</button>
     </header>

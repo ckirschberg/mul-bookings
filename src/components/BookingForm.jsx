@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function BookingForm() {
+export default function BookingForm({ setBookings }) {
   const [room, setRoom] = useState("");
   const [date, setDate] = useState(""); // date
 
@@ -17,15 +17,17 @@ export default function BookingForm() {
     e.preventDefault();
     console.log("You clicked");
     let booking = { room: room, date: date };
-    const response = await fetch('https://mul2022-bookings-default-rtdb.europe-west1.firebasedatabase.app/.json',
-    { 
-      method: 'POST', 
-      body: JSON.stringify(booking)
-    })
+    const response = await fetch(
+      "https://mul-3rd-sem-default-rtdb.europe-west1.firebasedatabase.app/bookings.json",
+      {
+        method: "POST",
+        body: JSON.stringify(booking),
+      }
+    );
     const result = await response.json();
     console.log(result);
     booking.id = result.name;
-    console.log(booking);
+    setBookings(booking);
   };
 
   return (
