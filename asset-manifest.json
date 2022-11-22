@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mul-bookings/static/css/main.e8769721.css",
+    "main.js": "/mul-bookings/static/js/main.91a384da.js",
+    "static/js/787.22cf53f4.chunk.js": "/mul-bookings/static/js/787.22cf53f4.chunk.js",
+    "index.html": "/mul-bookings/index.html",
+    "main.e8769721.css.map": "/mul-bookings/static/css/main.e8769721.css.map",
+    "main.91a384da.js.map": "/mul-bookings/static/js/main.91a384da.js.map",
+    "787.22cf53f4.chunk.js.map": "/mul-bookings/static/js/787.22cf53f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8769721.css",
+    "static/js/main.91a384da.js"
+  ]
+}
