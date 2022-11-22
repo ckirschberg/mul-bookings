@@ -27,7 +27,9 @@ export default function BookingForm({ setBookings }) {
     const result = await response.json();
     console.log(result);
     booking.id = result.name;
-    setBookings(booking);
+    setBookings((previousValue) => {
+      return [...previousValue, booking];
+    });
   };
 
   return (
